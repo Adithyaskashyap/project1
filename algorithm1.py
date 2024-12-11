@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 tsp_routes = Blueprint("tsp", __name__)
 client = MongoClient("mongodb://localhost:27017/")  
-db = client["tourist_places"]  
+db = client["Travel"]  
 collection = db["tourist_places"]
 
 @tsp_routes.route("/solve_tsp", methods=["POST", "GET"])
