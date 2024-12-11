@@ -49,7 +49,7 @@ def solve_tsp():
         optimal_path, optimal_distance = simulated_annealing_tsp(cities, coordinates, initial_temp, cooling_rate, max_iter)
         city_details = []
         for city in best_route:
-            city_info = city_collection.find_one({"name": city}, {"_id": 0})  # Find city details and exclude _id
+            city_info = collection.find_one({"name": city}, {"_id": 0})  # Find city details and exclude _id
             if city_info:
             city_details.append(city_info)
         return jsonify({
