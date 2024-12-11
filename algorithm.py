@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 astar_routes=Blueprint('a_star',__name__)
 client = MongoClient("mongodb://localhost:27017/")  
-db = client["tourist_places"]  
+db = client["Travel"]  
 collection = db["tourist_places"]
 
 
